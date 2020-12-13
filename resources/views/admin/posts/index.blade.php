@@ -1,4 +1,4 @@
-<a href="{{ route('posts.store') }}">Criar novo Post</a>
+<a href="{{ route('posts.store') }}">Criar Novo Post</a>
 <hr>
 @if (session('message'))
 

@@ -1,4 +1,4 @@
-<h1>editar o  Post <strong>{{ $post->title }}</strong></h1>
+<h1>Editar o  Post <strong>{{ $post->title }}</strong></h1>
 
 
 @if ($errors->any())

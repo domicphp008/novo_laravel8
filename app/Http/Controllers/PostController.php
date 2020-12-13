@@ -74,7 +74,7 @@ class PostController extends Controller
 
        return redirect()
                 ->route('posts.index')
-                ->with('message', 'Post atualizado com sucesso');
+                ->with('message', 'Post atualizados com sucesso');
     }
 
 

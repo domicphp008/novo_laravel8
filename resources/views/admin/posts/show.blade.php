@@ -1,4 +1,4 @@
-<h2>Detalhes do Post {{ $post->title }}</h2>
+<h1 >Detalhes do Post {{ $post->title }}</h1>
 
 <ul>
 <li><strong>Título:</strong>{{ $post->title }}</li>

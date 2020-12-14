@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreUpdatePost;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::get();
+        $posts = Post::latest()->paginate();
 
         return view('admin.posts.index', compact('posts'));
 
@@ -26,8 +28,8 @@ class PostController extends Controller
          Post::create($request->all());
 
             return redirect()
-                 ->route('posts.index')
-                 ->with('message', 'Post criado com sucesso');;
+            ->route('post.index')
+            ->with('message', 'Post criado com sucesso');;
     }
 
     public function show($id)
@@ -70,7 +72,7 @@ class PostController extends Controller
         }
 
 
-       $post->update([$request->all]);
+       $post->update($request->all());
 
        return redirect()
                 ->route('posts.index')
